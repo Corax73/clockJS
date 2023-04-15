@@ -1,6 +1,10 @@
 const clockContainer = document.querySelector('.js-clock');
 const clockTitle = clockContainer.querySelector('h1');
 
+/**
+ * determine the time
+ * and take it out
+ */
 function getTime() {
 
     let date = new Date();
@@ -11,6 +15,10 @@ function getTime() {
 
 }
 
+/**
+ * script initialization
+ * start a function call on a timer
+ */
 function init() {
 
     getTime();
