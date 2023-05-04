@@ -12,9 +12,7 @@
         <h1>00:00</h1>
     </div>
     <form action="" class="js-form form">
-        <!--<label for="input-name">-->
-            <input type="text" placeholder="Как Вас зовут?">
-        <!--</label>-->
+        <input type="text" placeholder="Как Вас зовут?">
     </form>
     <h2 class="js-greetings greetings"></h2>
     <form action="" class="js-todoForm">
@@ -22,11 +20,21 @@
     </form>
     <ul class="js-todoList"></ul>
     <span class="js-weather"></span>
+    <div class="js-stopwatch">
+        <h2>Секундомер</h2>
+        <span id="minutes">00</span>
+        <span id="seconds">00</span>
+        <span id="milliseconds">00</span>
+        <button id="startCountdown">Старт</button>
+        <button id="pauseCountdown">Пауза</button>
+        <button id="stopCountdown">Стоп</button>
+    </div>
     <script src="js/clock.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/bg.js"></script>
     <script src="js/apikey.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/stopwatch.js"></script>
 </body>
 </html>
