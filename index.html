@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="body1">
+    <img id="imgBody" src="images/1.jpg" class="bgImage">
     <div class="container">
     <div class="row">
     <div class="col-sm">
@@ -39,52 +40,49 @@
     Используется шрифт <span id="A"></span>, стиль -<span id="B"></span>, размер <span
     id="C"></span>, цвет - <span id="D"></span>.
     </p>
-    <!-- Таблица с элементами управления -->
     <table id="t1" style="width:100%;">
-    <!-- Первая и единственная строка таблицы -->
-    <tr>
-    <!-- Первый столбец -->
-    <td>
-    <b>Стиль шрифта</b><br><br>
-    <!-- Опция применения жирного стиля -->
-    <input type="checkbox" id="boldFont">Жирный шрифт<br>
-    <!-- Опция применения курсивного стиля -->
-    <input type="checkbox" id="italicFont">Курсивный шрифт
-    </td>
-    <!-- Второй столбец -->
-    <td>
-    <b>Тип шрифта</b><br><br>
-    <!-- Первый переключатель -->
-    <input type="radio" name="fontFamily" value="Times New Roman">Шрифт Times<br>
-    <!-- Второй переключатель -->
-    <input type="radio" name="fontFamily" value="Arial">Шрифт Arial<br>
-    <!-- Третий переключатель -->
-    <input type="radio" name="fontFamily" value="Courier New">Шрифт Courier
-    </td>
-    <!-- Третий столбец -->
-    <td>
-    <b>Размер шрифта</b><br>
-    Шрифт размера
-    <!-- Раскрывающийся список -->
-    <select size="1" id="fontSize" style="font-size:11pt;font-weight:900;">
-    <option value="15">15</option>
-    <option value="18">18</option>
-    <option value="20">20</option>
-    <option value="22">22</option>
-    <option value="25">25</option>
-    </select><br><br>
-    <b>Цвет шрифта</b><br>
-    <!-- Список выбора -->
-    <select size="3" id="fontColor" style="font-size:12pt;">
-    <option value="red">Красный цвет</option>
-    <option value="blue">Синий цвет</option>
-    <option value="green">Зеленый цвет</option>
-    </select>
-    </td>
-    </tr>
+        <tr>
+            <td>
+                <b>Стиль шрифта</b><br><br>
+                <input type="checkbox" id="boldFont">Жирный шрифт<br>
+                <input type="checkbox" id="italicFont">Курсивный шрифт
+            </td>
+            <td>
+                <b>Тип шрифта</b><br><br>
+                <input type="radio" name="fontFamily" value="Times New Roman">Шрифт Times<br>
+                <input type="radio" name="fontFamily" value="Arial">Шрифт Arial<br>
+                <input type="radio" name="fontFamily" value="Courier New">Шрифт Courier
+            </td>
+            <td>
+                <b>Размер шрифта</b><br>
+                Шрифт размера
+                <select size="1" id="fontSize" style="font-size:11pt;font-weight:900;">
+                    <option value="15">15</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="25">25</option>
+                </select><br><br>
+                <b>Цвет шрифта</b><br>
+                <select size="3" id="fontColor" style="font-size:12pt;">
+                    <option value="red">Красный цвет</option>
+                    <option value="blue">Синий цвет</option>
+                    <option value="green">Зеленый цвет</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Переключение фона</b><br>
+                <select size="1" id="bgImageSelector" style="font-size:12pt;">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                </select>
+            </td>
+        </tr>
     </table>
-    
-        </div>
+</div>
     <script src="js/clock.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/todo.js"></script>

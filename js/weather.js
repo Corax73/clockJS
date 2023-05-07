@@ -17,7 +17,6 @@ function getWeather(lat, lng){
         })
         .then(function(json){
 
-            console.log(json);
             let temperature = json.main.temp;
             let place = json.name;
             let pressure = Math.round(json.main.pressure * 0.75008);

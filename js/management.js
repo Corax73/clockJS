@@ -116,7 +116,7 @@ function getColor() {
 
 /**
  * translation string 'color'
- * @param {*} color 
+ * @param {string} color 
  * @returns 
  */
 function translationColor(color) {

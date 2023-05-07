@@ -1,5 +1,7 @@
 const body = document.querySelector('body');
 const IMAGE_NUMBER = 3;
+const bgImage = document.getElementById('bgImageSelector');
+const imgBody = document.getElementById('imgBody');
 
 /**
  * @returns int number
@@ -18,11 +20,33 @@ function getRandom() {
  */
 function showImage(number){
 
-    let img = new Image();
+    imgBody.src = `images/${number + 1}.jpg`;
 
-    img.src = `images/${number + 1}.jpg`;
-    img.classList.add('bgImage');
-    body.prepend(img);
+}
+
+/**
+ * transferring the background selection menu to the corresponding random generation item
+ */
+function bgImageSelectorController() {
+
+    let img;
+    img = parseInt(imgBody.src.match(/\d+/));
+    bgImage.options.selectedIndex = img - 1;
+
+}
+
+/**
+ * background selection event handling
+ */
+function bgImageHandler() {
+
+    bgImage.addEventListener('change', function() {
+
+        let imgName;
+        imgName = + bgImage.value;
+        showImage(imgName);
+    
+    });
 
 }
 
@@ -32,7 +56,9 @@ function showImage(number){
 function init() {
 
     let randomNumber = getRandom();
+    bgImageHandler();
     showImage(randomNumber);
+    bgImageSelectorController();
 
 }
 
