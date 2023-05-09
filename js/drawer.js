@@ -3,15 +3,33 @@ const ctx = canv.getContext('2d');
 let isMouseDown = false;
 let coords = [];
 let radius = 5;
+let headColor = document.getElementById('head');
+let colorForDraw;
 
-canv.width = window.innerWidth;
-canv.height = window.innerHeight;
+canv.width = 500;
+canv.height = 500;
 
+/**
+ * getting the user-selected color
+ */
+function getColor() {
+    
+    headColor.addEventListener('change', function() {
+
+        colorForDraw = headColor.value;
+        ctx.strokeStyle = colorForDraw;
+        ctx.fillStyle = colorForDraw;
+    
+    });
+
+}
 /**
  * drawing lines and saving to an array
  */
 function draw() {
     
+    ctx.strokeStyle = colorForDraw;
+    ctx.fillStyle = colorForDraw;
     canv.addEventListener('mousedown', function() {
         
         isMouseDown = true;
@@ -67,6 +85,7 @@ function clear() {
     ctx.fillRect(0, 0, canv.width, canv.height);
 
     ctx.beginPath();
+    ctx.strokeStyle = 'black';
     ctx.fillStyle = 'black';
 
 }
@@ -76,6 +95,8 @@ function clear() {
  */
 function replay() {
 
+    ctx.strokeStyle = colorForDraw;
+    ctx.fillStyle = colorForDraw;
     let timer;
     timer = setInterval(function() {
 
@@ -149,6 +170,7 @@ function init() {
     
     listenerKeyboard();
     draw();
+    getColor();
 
 }
 
