@@ -6,6 +6,9 @@ let radius = 5;
 let headColor = document.getElementById('head');
 let colorForDraw;
 
+const clearBtn = document.getElementById('btn-clear');
+const repeatBtn = document.getElementById('btn-repeat');
+
 canv.width = 500;
 canv.height = 500;
 
@@ -87,7 +90,7 @@ function clear() {
     ctx.beginPath();
     ctx.strokeStyle = 'black';
     ctx.fillStyle = 'black';
-
+    
 }
 
 /**
@@ -134,6 +137,24 @@ function replay() {
 }
 
 /**
+ * buttons handler
+ */
+function btnHandler() {
+
+    clearBtn.addEventListener('click', function() {
+
+        clear();
+
+    });
+
+    repeatBtn.addEventListener('click', function() {
+
+        replay();
+
+    });
+}
+
+/**
  * control key response
  */
 function listenerKeyboard() {
@@ -171,6 +192,7 @@ function init() {
     listenerKeyboard();
     draw();
     getColor();
+    btnHandler();
 
 }
 
