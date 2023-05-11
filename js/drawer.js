@@ -145,11 +145,13 @@ function expand() {
     if (canv.width == 1500) {
 
         canv.width = 500;
+        expandBtn.innerHTML = 'Expand';
         ctx.lineWidth = radius * 2;
 
     } else {
 
         canv.width = 1500;
+        expandBtn.innerHTML = 'Collapse';
         ctx.lineWidth = radius * 2;
 
     }
