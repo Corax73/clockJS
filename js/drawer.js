@@ -8,6 +8,7 @@ let colorForDraw;
 
 const clearBtn = document.getElementById('btn-clear');
 const repeatBtn = document.getElementById('btn-repeat');
+const expandBtn = document.getElementById('btn-expand');
 
 canv.width = 500;
 canv.height = 500;
@@ -137,6 +138,25 @@ function replay() {
 }
 
 /**
+ * resizing the drawing area and reassigning line thickness
+ */
+function expand() {
+
+    if (canv.width == 1500) {
+
+        canv.width = 500;
+        ctx.lineWidth = radius * 2;
+
+    } else {
+
+        canv.width = 1500;
+        ctx.lineWidth = radius * 2;
+
+    }
+    
+}
+
+/**
  * buttons handler
  */
 function btnHandler() {
@@ -150,6 +170,12 @@ function btnHandler() {
     repeatBtn.addEventListener('click', function() {
 
         replay();
+
+    });
+
+    expandBtn.addEventListener('click', function() {
+
+        expand();
 
     });
 }
