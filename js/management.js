@@ -45,31 +45,31 @@ function getStyle() {
         
         stext.style.fontWeight = 'bold';        
         txt += ' жирный';
-
-} else {
     
-    stext.style.fontWeight = 'normal';
-
-}
-
-if(fitalic.checked) {
+    } else {
+        
+        stext.style.fontWeight = 'normal';
     
-    stext.style.fontStyle = 'italic';
-    txt += ' курсивный';
-
-} else {
+    }
     
-    stext.style.fontStyle = 'normal';
-
-}
-
-if(txt == '') {
+    if(fitalic.checked) {
+        
+        stext.style.fontStyle = 'italic';
+        txt += ' курсивный';
     
-    txt = ' обычный';
-
-}
-
-tstyle.innerHTML = txt;
+    } else {
+        
+        stext.style.fontStyle = 'normal';
+    
+    }
+    
+    if(txt == '') {
+        
+        txt = ' обычный';
+    
+    }
+    
+    tstyle.innerHTML = txt;
 
 }
 
