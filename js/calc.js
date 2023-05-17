@@ -24,7 +24,8 @@ function counting() {
     
             } else if (input.innerHTML == 'Деление на 0') {
                 
-                input.innerHTML = btnValue;
+                input.innerHTML = '';
+                e.preventDefault();
             
             } else if(btnValue == '=') {
     
